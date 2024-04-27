@@ -9,8 +9,16 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Estilo personalizado -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- JavaScript for handling the AJAX request -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <!-- Notification Area -->
+    <div id="notification" style="display: none; position: fixed; top: 0; width: 100%; text-align: center; z-index: 1050;">
+        <div id="success" class="alert alert-success" style="display: none;">Email sent successfully!</div>
+        <div id="error" class="alert alert-danger" style="display: none;">Error sending email!</div>
+    </div>
+    <!-- Notification Area -->
     <!-- Wrap -->
     <div class="wrap">
         <div class="container">
@@ -77,7 +85,7 @@
             <div class="bg-primary rounded-4 p-4 position-relative oveflow-hidden">
     					<h3 class="request text-white text-center mb-2">Request Service</h3>
               <p class="text-white mb-4">Enter your contact details here to help us serve you better & faster.</p>
-              <form class="row g-4 align-items-center pb-sm-6" method="POST" action="http://localhost:3000/send-email">
+              <form id='appoinment-form' class="row g-4 align-items-center pb-sm-6" method="POST" >
                 <div class="col-md-6">
                   <label for="name">Name</label>
                   <input name="name" type="text" class="form-control">
@@ -103,7 +111,7 @@
                 
                 <div class="col-12">
                   <label for="email">Message</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                  <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div> 
                 <button type="submit" class="btn btn-info mb-0">Get an appointment</button>
               </form>
@@ -210,5 +218,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- JavaScript Personalizado -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>
