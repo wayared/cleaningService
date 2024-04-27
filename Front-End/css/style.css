@@ -1,0 +1,320 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.wrap {
+    background: #f56ac4;
+    padding: 0;
+}
+
+.wrap .phone {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wrap .phone a {
+    color: white;
+    font-size: 12px;
+}
+
+.wrap .phone .fa {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.wrap .phone .mailus {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social-media {
+    display: inline-block;
+}
+
+.social-media p a {
+    width: 28px;
+    height: 28px;
+    margin-right: 7px;
+    border-radius: 50%;
+}
+
+.social-media p a span {
+    color: #fff;
+}
+
+.social-media p a:hover span {
+    color: #fff;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+#navbar-logo{
+    height: auto;  /* Mantiene la proporción de la imagen */
+    width: 8%;  /* Ajusta esto a la anchura deseada */
+}@media (max-width: 768px) {
+    #navbar-logo {
+        width: 53px;  /* Más pequeño en dispositivos móviles */
+    }
+}
+
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #17a2b8; 
+    color: #fff; /* Texto blanco */
+}
+
+.navbar {
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar.hide {
+    transform: translateY(-250%);
+  }
+
+.hero-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 34, 34, 0);
+    /* Controla la opacidad aquí */
+    z-index: -1;
+}
+
+
+.hero-wrap {
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    height: 100vh;
+}
+
+@media (max-width: 1199.98px) {
+    hero-wrap {
+        background-position: center center !important;
+    }
+}
+
+.hero-wrap .overlay {
+    position: absolute;
+    height: 100vh; /* La altura del viewport para que no se desborde al hacer scroll */
+    width: 100%; /* Asegura que ocupa toda la anchura */
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-wrap.hero-wrap-2 {
+    height: 500px;
+}
+
+.container{
+    position: relative;
+    z-index: 20;
+}
+
+.mb-4,.subheading{
+    color:white;
+}
+
+.hero-wrap.hero-wrap-2 .overlay {
+    opacity: .3;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text {
+    height: 500px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 0%;
+    border-radius: 15px;
+    width: auto;
+    padding: 0%;
+    position: fixed;
+    top: 50px;
+    /* Espacio desde la parte superior */
+    left: 50%;
+    /* Centra el navbar horizontalmente */
+    transform: translateX(-50%);
+    /* Ajuste fino para centrar exactamente */
+    width: 80%;
+    height: 7%;
+    /* Ancho del navbar, ajustable según necesidad */
+    z-index: 100;
+    /* Asegura que el navbar esté sobre otros elementos */
+    background-color: rgba(255, 111, 192, 0.9);
+    /* Opcional: fondo semi-transparente */
+}
+
+.navbar-brand {
+    padding-left: 5%;
+}
+
+.custom-navbar-bg, .btn-primary {
+    background-color: #f56ac4;
+}
+
+#video1{
+    position: absolute; 
+    width: 100%; 
+    left: 50%; 
+    top: 50%;
+    height: 100%; 
+    object-fit: cover; 
+    transform: translate(-50%, -50%);
+}
+
+.video-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Por debajo del overlay y del texto. */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Mismo z-index que su contenedor para evitar conflictos. */
+}
+
+.btn-primary:hover {
+    background-color: #459cff;
+}
+
+.btn{
+    border-radius: 40px;
+}
+
+.nav-item {
+    padding-right: 20px;
+
+}
+
+.nav-link {
+    background-color: rgb(255, 255, 255, 0.4);
+    color: rgb(0, 0, 0);
+    width: 60;
+    border-radius: 20px;
+}
+
+section .container{
+    height: 100vh;
+}
+
+/* Esto es para asegurarse de que el contenedor del texto utilice Flexbox para centrarse */
+.slider-text {
+    display: flex;
+    align-items: center; /* Esto centra verticalmente el texto en el contenedor */
+    justify-content: flex-start; /* Esto alinea el texto a la izquierda del contenedor */
+    height: 100vh; /* Esto asegura que .slider-text tenga la altura completa de la ventana gráfica */
+    width: 100%; /* Asegúrate de que .slider-text ocupe el ancho total del .hero-wrap */
+    position: absolute; /* Posicionamiento absoluto dentro de hero-wrap */
+    top: 0; /* Alinea en la parte superior del .hero-wrap */
+    left: 0; /* Alinea en el lado izquierdo del .hero-wrap */
+    padding-left: 15px; /* Agrega algo de espacio al lado izquierdo */
+    z-index: 10; /* Asegúrate de que esté sobre el video */
+}
+
+/* Esto es para asegurarse de que el texto no se estire más allá de lo que queremos y permanezca dentro de su columna */
+.col-md-6.ftco-animate {
+    margin-top: 0; /* Reset esto para evitar cualquier desplazamiento hacia abajo adicional */
+    transform: none; /* Elimina cualquier transformación anterior que pudiera afectar la posición */
+    /* Si necesitas más espacio a la izquierda, ajusta padding-left como se muestra a continuación */
+    padding-left: 15px; /* Esto añadirá espacio desde el borde izquierdo del contenedor */
+}
+
+.bg-primary {
+    background-color: #0dcaf0 !important; /* Cambia #nuevoColorDeFondo por el color deseado */
+}
+
+.bg-primary h3{
+    font-weight:800; /* Cambia #nuevoColorDeFondo por el color deseado */
+}
+
+form label{
+    color:white;
+}
+
+.request{ 
+    font-weight: 300;
+    font-size: 20px}
+
+#introduce {
+    background-color: #ff91d8;
+    background-image: url('images/bubbles.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#introduce-container{
+    padding-top: 15%;
+    
+}
+.container #instroduce-container{
+    min-height: 100vh;
+}
+
+#appoinment{
+    width: 40%;
+}
+
