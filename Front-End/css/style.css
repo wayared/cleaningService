@@ -320,3 +320,52 @@ form label{
     width: 40%;
 }
 
+/*Portafolio*/
+.card-style1 {
+    position: relative;
+    display: block;
+    transition: all 300ms ease;
+    transform: perspective(1200px) rotateX(0deg) translateY(0px);
+    border: 1px solid rgba(0,0,0,0.09);
+    padding: 8px 8px 0 8px;
+    height: 100%;
+}
+
+.card-style1 .card-img {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card-style1 .card-img img {
+    transition: all 0.3s linear 0s;
+}
+
+.card-img img {
+    max-width: 100%; /* ensures image is responsive and doesn't overflow the card */
+    height: auto; /* maintains aspect ratio */
+    max-height: 10%; /* adjust this value to suit your design */
+}
+
+.card-style1 .card-body {
+    padding: 2rem 1rem;
+}
+
+.card-style1 .card-body h3 {
+    margin-bottom: 0.8rem;
+}
+
+.card-style1 .card-body h3 a {
+    color: #004975;
+}
+
+.read-more {
+    color: #004975;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
