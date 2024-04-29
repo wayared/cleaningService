@@ -58,3 +58,14 @@ function showNotificationError() {
   console.log("Showing Error");
     $("#error").css('display', 'block').slideDown(500).delay(5000).slideUp(500);
 }
+
+
+// main.js o el nombre de tu archivo JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+  AOS.init({
+    // Opciones aquí. Por ejemplo:
+    once: true, // la animación solo ocurre una vez cuando el elemento aparece en pantalla
+    mirror: false, // no repetir la animación cuando el elemento salga de la pantalla
+    // etc.
+  });
+});
