@@ -100,7 +100,7 @@ section {
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #17a2b8; 
+    background-color: #fc93d7; 
     color: #fff; /* Texto blanco */
 }
 
@@ -238,7 +238,12 @@ nav {
 }
 
 .btn-primary:hover {
-    background-color: #459cff;
+    background-color: #fc93d7;
+    border-color: #f56ac4;
+}
+
+.btn-primary{
+    border-color: #f56ac4;
 }
 
 .btn{
@@ -258,7 +263,7 @@ nav {
 }
 
 #introduce{
-    height: 100vh;
+    height: 105vh !important;
 }
 
 /* Esto es para asegurarse de que el contenedor del texto utilice Flexbox para centrarse */
@@ -284,7 +289,7 @@ nav {
 }
 
 .bg-primary {
-    background-color: #0dcaf0 !important; /* Cambia #nuevoColorDeFondo por el color deseado */
+    background-color: #ff91d8!important; /* Cambia #nuevoColorDeFondo por el color deseado */
 }
 
 .bg-primary h3{
@@ -296,8 +301,9 @@ form label{
 }
 
 .request{ 
-    font-weight: 300;
-    font-size: 20px}
+    font-weight: 400 !important; 
+    font-size: 30px;
+}
 
 #introduce {
     background-color: #ff91d8;
@@ -312,7 +318,7 @@ form label{
 }
 
 #introduce-container{
-    padding-top: 15%;
+    padding-top: 10%;
     
 }
 .container #instroduce-container{
@@ -418,9 +424,13 @@ form label{
 /*Why*/
 
 .why{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color:#ff91d8 !important;
+    background-color: #ff91d8 ;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 
