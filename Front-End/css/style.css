@@ -307,6 +307,10 @@ form label{
     background-position: center center;
 }
 
+#introduce-p{
+    color: white !important;
+}
+
 #introduce-container{
     padding-top: 15%;
     
@@ -422,6 +426,64 @@ form label{
 
 /*Footer*/
 
+.footer-social-icon {
+    margin-bottom: 0;
+}
+
+.footer-social-icon li {
+    text-align: center;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.footer-social-icon li a {
+    color: #ffffff;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+}
+
+.footer-list {
+    margin: 0;
+}
+
+.footer-list li:first-child {
+    padding-top: 0;
+}
+
+.footer-list li {
+    font-size: 15px;
+}
+
+.footer-list li {
+    list-style-type: none;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-contact-info .content {
+    flex-basis: 40%;
+}
+
+.footer-contact-info .box {
+    padding: 15px;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.15);
     text-align: center;
@@ -438,6 +500,12 @@ form label{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+
+.footer-contact-info .box h2 {
+    font-size: 20px;
+}
+
+
 
 #logo{
     height: auto;
