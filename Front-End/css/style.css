@@ -321,6 +321,13 @@ form label{
 }
 
 /*Portafolio*/
+.text-primary {
+    color: #000000 !important;
+}
+
+.services-title{
+    padding-top: 5%;
+}
 
 #portafolio {
     background-color: #ff91d8;
@@ -390,3 +397,8 @@ form label{
 .mb-1-9, .my-1-9 {
     margin-bottom: 1.9rem;
 }
+
+.cards {
+    width: 28%;
+}
+
