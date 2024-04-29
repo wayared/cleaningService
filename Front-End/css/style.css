@@ -438,3 +438,8 @@ form label{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+
+#logo{
+    height: auto;
+    width: 30%;
+}
