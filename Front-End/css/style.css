@@ -5,7 +5,7 @@ body {
 }
 
 .wrap {
-    background: #f56ac4;
+    background: #000000;
     padding: 0;
 }
 
@@ -301,7 +301,6 @@ form label{
 
 #introduce {
     background-color: #ff91d8;
-    background-image: url('images/bubbles.jpg');
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
@@ -321,6 +320,16 @@ form label{
 }
 
 /*Portafolio*/
+
+#portafolio {
+    background-color: #ff91d8 !important;
+    background-image: url('images/bubbles.jpg');
+    background-blend-mode: multiply !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
 .text-primary {
     color: #000000 !important;
 }
@@ -407,4 +416,25 @@ form label{
 .why{
     padding-top: 5%;
     padding-bottom: 5%;
+    background-color:#ff91d8 !important;
+}
+
+
+/*Footer*/
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.footer{
+    background-color: #ff91d8;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
