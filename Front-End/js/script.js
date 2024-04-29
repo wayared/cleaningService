@@ -63,9 +63,7 @@ function showNotificationError() {
 // main.js o el nombre de tu archivo JavaScript
 document.addEventListener("DOMContentLoaded", function() {
   AOS.init({
-    // Opciones aquí. Por ejemplo:
-    once: true, // la animación solo ocurre una vez cuando el elemento aparece en pantalla
-    mirror: false, // no repetir la animación cuando el elemento salga de la pantalla
-    // etc.
+    mirror: true, // los elementos animados también desaparecen al salir de la pantalla
+    once: false, // si quieres que la animación se ejecute solo una vez
   });
 });
