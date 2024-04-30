@@ -65,3 +65,4 @@ document.addEventListener("DOMContentLoaded", function() {
     once: false, // si quieres que la animación se ejecute solo una vez
   });
 });
+
