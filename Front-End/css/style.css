@@ -5,7 +5,7 @@ body {
 }
 
 .wrap {
-    background: #000000;
+    background: #f56ac4;
     padding: 0;
 }
 
@@ -13,6 +13,8 @@ body {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
 }
+
+
 
 .wrap .phone a {
     color: white;
@@ -29,6 +31,23 @@ body {
 
 .social-media {
     display: inline-block;
+}
+
+a:visited, a:focus {
+    outline: none; /* Elimina el contorno que aparece al hacer clic */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.social-media a {
+    color: inherit; /* Esto mantendrá el color del ícono igual que tu texto, o puedes definir un color específico */
+}
+
+.social-media a:visited {
+    text-decoration: none; /* Elimina el subrayado de los enlaces visitados */
+}
+
+.social-media a:focus {
+    outline: none; /* Elimina el contorno para un enfoque accesible */
 }
 
 .social-media p a {
@@ -535,6 +554,9 @@ form label{
     margin-right: 0.5em; /* Añade espacio entre el ícono y el texto */
 }
 
+.box:hover {
+    background-color: #fc93d7; /* Cambia esto por el color de fondo deseado */
+}
 
 
 .ourfooter, .contact, .estimate{
