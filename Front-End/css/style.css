@@ -5,8 +5,9 @@ body {
 }
 
 .wrap {
-    background: #f56ac4;
+    background-color: #f56ac4;
     padding: 0;
+    border-color: #f56ac4  !important;
 }
 
 .wrap .phone {
@@ -625,4 +626,10 @@ form label{
 
 .footer-social-icon li :hover{
     background-color: #f56ac4;
+}
+
+.footer-list a, 
+.footer-social-icon a, 
+.estimate, .box{
+    transition: background-color 0.5s ease; /* Cambia el color del fondo en un intervalo de 0.5 segundos */
 }

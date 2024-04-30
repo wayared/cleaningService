@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, false);
   });
 
-
   $(document).ready(function() {
     $('#appoinment-form').on('submit', function(e) {
         e.preventDefault(); // Prevent the form from submitting normally
@@ -58,7 +57,6 @@ function showNotificationError() {
   console.log("Showing Error");
     $("#error").css('display', 'block').slideDown(500).delay(5000).slideUp(500);
 }
-
 
 // main.js o el nombre de tu archivo JavaScript
 document.addEventListener("DOMContentLoaded", function() {
