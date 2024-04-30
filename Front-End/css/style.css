@@ -503,14 +503,41 @@ form label{
 
 .box{
  background-color: #f56ac4;
- border-radius: 20px;
+ border-radius: 10px;
+ display: flex;
+ justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+ padding: 10px; /* Añade un poco de padding si es necesario */
 }
 
-.icon{
-    padding-right: 4%;
+.icon i{
+    font-size: 130%;
+    
 }
 
-.ourfooter, .contact, #estimate{
+.estimate {
+    display: inline-block; /* Hace que el enlace sea en bloque para alinear el ícono y el texto */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    font-size: 110%; /* Aumenta el tamaño del texto si es necesario */
+    display: flex; /* Utiliza flexbox para un mejor control del alineamiento */
+    align-items: center; /* Alinea el ícono y el texto verticalmente */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    font-size: 1em; /* Ajusta el tamaño del texto */
+    white-space: nowrap; /* Evita que el texto se pase a la siguiente línea */
+}
+
+.estimate .icon {
+    display: inline; /* Coloca el ícono en la misma línea que el texto */
+    font-size: 2em; /* Ajusta el tamaño del ícono */
+    vertical-align: middle; /* Alinea verticalmente el ícono con el texto */
+}
+
+.estimate .icon i {
+    margin-right: 0.5em; /* Añade espacio entre el ícono y el texto */
+}
+
+
+
+.ourfooter, .contact, .estimate{
     color: white !important;
     font-weight: 600;
     text-decoration: none;
