@@ -459,21 +459,65 @@ form label{
 
 .footer-list {
     margin: 0;
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    list-style-type: none; /* Elimina los bullets de la lista */
 }
 
 .footer-list li:first-child {
     padding-top: 0;
 }
 
-.footer-list li {
-    font-size: 15px;
-}
 
 .footer-list li {
     list-style-type: none;
     color: #fff;
     padding: 5px 0;
     font-size: 16px;
+}
+
+.footer-list li a:before {
+    color: white !important;
+
+}
+
+.footer-list a {
+    color: white;          /* Esto hace el texto blanco */
+    text-decoration: none; /* Esto elimina el subrayado */
+    font-weight: 500;
+}
+
+.footer-list a:hover {
+    text-decoration: none; /* Esto asegura que no haya subrayado incluso al pasar el mouse por encima */
+    color: #f56ac4;
+}
+
+
+.footer-list {
+    font-weight: 700;
+    color: white;
+    transition-duration: .3s;
+    vertical-align: top;
+    font-size: 16px;
+    padding-right: 20%;
+}
+
+.box{
+ background-color: #f56ac4;
+ border-radius: 20px;
+}
+
+.icon{
+    padding-right: 4%;
+}
+
+.ourfooter, .contact, #estimate{
+    color: white !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fa-arrow-right{
+    padding-right: 3%;
 }
 
 .footer-contact-info {
@@ -528,4 +572,8 @@ form label{
     height: auto;
     width: 60%;
     padding-bottom: 10%;
+}
+
+.footer-social-icon li :hover{
+    background-color: #f56ac4;
 }
