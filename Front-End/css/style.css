@@ -8,6 +8,56 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+body,html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+@media (max-width: 600px) {
+    #introduce-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    #appoinment, .col-md-6.pl-md-5.pt-md-5 {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #appoinment {
+        padding: 1rem;
+    }
+
+    .hero-wrap.hero-wrap-2 {
+        height: auto;
+    }
+
+    .hero-wrap .overlay {
+        position: absolute;
+        height: auto; 
+        min-height: 100vh; 
+    }
+
+    .container #introduce-container {
+        min-height: auto;
+    }
+
+    .bg-primary {
+        border-radius: 1rem;
+    }
+
+    #introduce {
+        height: auto;
+    
+    }
+
+}
+
 .wrap {
     background-color: #f56ac4;
     padding: 0;
@@ -173,18 +223,7 @@ section {
 }
 
 .hero-wrap .overlay {
-    position: absolute;
-    height: 100vh; /* La altura del viewport para que no se desborde al hacer scroll */
-    width: 100%; /* Asegura que ocupa toda la anchura */
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.hero-wrap.hero-wrap-2 {
-    height: 500px;
+    z-index: 10;  
 }
 
 .container{
@@ -235,6 +274,19 @@ nav {
 
 .custom-navbar-bg, .btn-primary {
     background-color: #f56ac4;
+    transition: background-color 0.5s ease; /* Cambia el color del fondo en un intervalo de 0.5 segundos */
+}
+
+.btn{
+    background-color: #f757bf;
+    border-color: #fc93d7;
+    color: black;
+}
+
+.btn:hover{
+    transition: background-color 0.5s ease; /* Cambia el color del fondo en un intervalo de 0.5 segundos */;
+    background-color: #ff86d5;
+    color: white;
 }
 
 #video1{
@@ -289,7 +341,8 @@ nav {
 }
 
 #introduce{
-    height: 105vh !important;
+    min-height: 105vh !important;
+    position: relative;
 }
 
 /* Esto es para asegurarse de que el contenedor del texto utilice Flexbox para centrarse */
@@ -337,33 +390,40 @@ form label{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    width: 100% !important;
 }
 
 #introduce-p{
     color: white !important;
 }
 
-#introduce-container{
-    padding-top: 10%;
-    
-}
 .container #instroduce-container{
     min-height: 100vh;
-}
-
-#appoinment{
-    width: 40%;
 }
 
 /*Portafolio*/
 
 #portafolio {
     background-color: #ff91d8 !important;
-    background-image: url('images/bubbles.jpg');
     background-blend-mode: multiply !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
+    position: relative;
+    z-index: 9;  /* Lower index if it should be below the previous section */
+}
+
+@media (max-width: 768px) {
+    #introduce, #portfolio {
+        min-height: auto;
+        padding: 20px 0;
+       
+    }
+}
+
+#introduce .container{
+    padding-top: 10%;
+    
 }
 
 .text-primary {
@@ -374,13 +434,8 @@ form label{
     padding-top: 3%;
 }
 
-#portafolio {
-    background-color: #ff91d8;
-    background-image: url('images/bubbles.jpg');
-    background-blend-mode: multiply;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    background-position: center center;
+.card{
+    background-color: #ffa7e0;
 }
 
 .card-style1 {
