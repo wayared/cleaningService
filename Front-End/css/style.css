@@ -304,6 +304,14 @@ section {
     z-index: 20;
 }
 
+.container {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .mb-4,.subheading{
     color:white;
 }
@@ -507,15 +515,24 @@ form label{
     padding-top: 3%;
 }
 
-.card{
-    background-color: #ffa7e0;
+.cards {
+    margin-bottom: 20px;  // Adds more space between the cards
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  // Optional: Adds shadow for depth
 }
 
-@media (min-width: 768px) {
-    .card {
-        width: calc(33.333% - 20px); /* Three cards per row, accounting for some margin */
-        display: inline-block; /* Allows cards to sit side by side */
-        margin: 10px; /* Spacing between cards */
+.card img {
+    width: 100%; /* Ensure images fill the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+    padding: 15px; /* Padding inside the card */
+}
+
+@media (max-width: 576px) {
+    .cards {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
