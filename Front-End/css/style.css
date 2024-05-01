@@ -135,12 +135,83 @@ section {
     display: block;
 }
 
-#navbar-logo{
-    height: auto;  /* Mantiene la proporción de la imagen */
-    width: 8%;  /* Ajusta esto a la anchura deseada */
-}@media (max-width: 768px) {
+#navbar-logo {
+    width: 100%; /* Adjust this percentage based on your design */
+    max-width: 40px; /* Maximum size for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px) {
     #navbar-logo {
-        width: 53px;  /* Más pequeño en dispositivos móviles */
+        width: 10vw; /* Responsive width */
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: rgba(252, 149, 216, 0.9); /* Adjust for desired transparency and pink color */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 999; /* Make sure it's on top of other content */
+        border: none; /* Optional: remove if you don't want any border */
+        overflow-y: auto; /* Allows scrolling if the menu is taller than the screen */
+        padding: 1rem; /* Add padding inside the menu */
+        width: 100%;
+        border-top: none;
+        border-radius: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        display: block; /* Stack the links vertically */
+        text-align: center; /* Center the links */
+        margin: 0.5rem 0; /* Add some margin to the top and bottom of each link */
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff; /* Ensure text color is white for contrast */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds shadow for text readability */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 1rem 0; /* Increased space between items */
+    }
+
+}
+
+.navbar-toggler {
+    z-index: 1001; /* Above the navbar-collapse */
+}
+
+.navbar-collapse {
+    z-index: 1000; /* High enough to be on top of other content */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        display: block; /* Stack the links vertically */
+        text-align: center; /* Center the links */
+        margin: 0.5rem 0; /* Add some margin to the top and bottom of each link */
+    }
+
+    .navbar-nav .nav-link {
+        color: #333; /* Color for the links */
+    }
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on mobile */
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none; /* Hide the full menu on mobile until toggled */
     }
 }
 
@@ -181,7 +252,7 @@ section {
 }
 
 .navbar {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     position: fixed;
     width: 100%;
     top: 0;
@@ -189,8 +260,10 @@ section {
   }
   
   .navbar.hide {
-    transform: translateY(-250%);
+    transform: translateY(-900%);
   }
+
+
 
 .hero-wrap::before {
     content: '';
@@ -436,6 +509,14 @@ form label{
 
 .card{
     background-color: #ffa7e0;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: calc(33.333% - 20px); /* Three cards per row, accounting for some margin */
+        display: inline-block; /* Allows cards to sit side by side */
+        margin: 10px; /* Spacing between cards */
+    }
 }
 
 .card-style1 {
