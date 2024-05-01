@@ -1,7 +1,4 @@
 //Hamburguer
-$('.navbar-toggler').click(function() {
-  $(this).toggleClass('active');
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     var lastScrollTop = 0;

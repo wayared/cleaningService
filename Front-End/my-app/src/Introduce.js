@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import backgroundImage from './images/house.jpg'; // Make sure the path is correct
+import Notification from './Notifications';
 import './style.css'
 
 function Introduce() {
@@ -10,6 +11,7 @@ function Introduce() {
         serviceType: '',
         message: ''
     });
+    const [notification, setNotification] = useState({ message: '', type: '', isVisible: false });
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -19,11 +21,26 @@ function Introduce() {
         }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Handle the form submission logic here, e.g., sending data to a server
-        console.log(formData);
-        alert('Form submitted! Check the console for data.');
+        // Simulate a POST request
+        try {
+            const response = await fetch('http://localhost:3001/send-email', { // Update with your API endpoint
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setNotification({ message: 'Request successful!', type: 'success', isVisible: true });
+            } else {
+                throw new Error('Submission failed due to server error');
+            }
+        } catch (error) {
+            setNotification({ message: error.message, type: 'error', isVisible: true });
+        }
     };
 
     return (

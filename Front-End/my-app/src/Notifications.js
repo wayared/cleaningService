@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import './style.css'
+import './style.css';
 
 function Notification({ message, type }) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
         if (message) {
-            setVisible(true);
+            setVisible(true);  // Show the notification
             const timer = setTimeout(() => {
-                setVisible(false);
-            }, 3000);  // Hide the notification after 3 seconds
+                setVisible(false);  // Hide the notification after 5 seconds
+            }, 5000);
             return () => clearTimeout(timer);
         }
     }, [message]);
 
-    if (!visible) return null;
+    // Adding enter and exit animations using CSS classes
+    const notificationClass = visible ? "notification-visible" : "notification-hidden";
 
     return (
-        <div id="notification" style={{ position: 'fixed', top: 0, width: '100%', textAlign: 'center', zIndex: 1050 }}>
-            <div className={`alert ${type === 'success' ? 'alert-success' : 'alert-danger'}`} style={{ display: 'block' }}>
+        <div id="notification" className={`${notificationClass}`} style={{ position: 'fixed', top: 0, width: '100%', textAlign: 'center', zIndex: 1050 }}>
+            <div className={`alert ${type === 'success' ? 'alert-success' : 'alert-danger'}`}>
                 {message}
             </div>
         </div>
@@ -26,3 +27,4 @@ function Notification({ message, type }) {
 }
 
 export default Notification;
+
