@@ -4,6 +4,7 @@ import Wrap from './Wrap';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import HeroSection from './HeroSection';
+import Introduce from './Introduce' 
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Wrap />
             <NavBar />
             <HeroSection />
+            <Introduce />
             {/* Other components like Home, About, etc. */}
             <Footer />
             

@@ -1,6 +1,7 @@
 // src/components/Wrap.js
 import React from 'react';
 import nextdoorIcon from './images/nextdoor.png';  // Ensure the path to your images is correct
+import './style.css'
 
 function Wrap() {
     return (

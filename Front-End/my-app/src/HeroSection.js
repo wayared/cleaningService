@@ -1,5 +1,6 @@
 import React from 'react';
 import videoSource from './images/introduce.mp4'; // Adjust the path as necessary
+import './style.css'
 
 function HeroSection() {
     return (

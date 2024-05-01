@@ -8,7 +8,7 @@ function Footer() {
 
     return (
         <footer className="pt-16 pt-lg-20 pt-xl-24 bg-img cover-background theme-overlay-dark footer" 
-                style={{ backgroundImage: "url(images/tools.png)" }}>
+                style={{ backgroundImage: "url(./images/tools.png)" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-6 mb-2-5 mb-lg-0">

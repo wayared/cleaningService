@@ -1,6 +1,7 @@
 // src/components/Navbar.js
 import React from 'react';
 import logo from './images/logo1.png';  // Ensure the path to your images is correct
+import './style.css'
 
 function NavBar() {
     return (
