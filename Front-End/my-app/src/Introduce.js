@@ -34,14 +34,14 @@ function Introduce() {
             });
 
             if (response.ok) {
-                setNotification({ message: 'Request successful!', type: 'success', isVisible: true });
+                setNotification({ message: 'Email sent successfully!', type: 'success', isVisible: true });
             } else {
                 const errorResponse = await response.text(); // If not OK, get the response text
                 throw new Error(`Submission failed: ${errorResponse}`);
             }
         } catch (error) {
             console.log('Error:', error);
-            setNotification({ message: error.message, type: 'error', isVisible: true });
+            setNotification({ message: 'Error sending email!', type: 'error', isVisible: true });
         }
     };
 
