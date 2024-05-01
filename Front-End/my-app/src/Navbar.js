@@ -1,8 +1,8 @@
 // src/components/Navbar.js
 import React from 'react';
-import logo from '../images/logo1.png';  // Ensure the path to your images is correct
+import logo from './images/logo1.png';  // Ensure the path to your images is correct
 
-function Navbar() {
+function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
             <div className="container">
@@ -24,4 +24,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default NavBar;
