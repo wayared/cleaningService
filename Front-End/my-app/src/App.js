@@ -7,10 +7,12 @@ import HeroSection from './HeroSection';
 import Introduce from './Introduce' 
 import Portfolio from './Portfolio'
 import WhyChooseUs from './Why';
+import Notification from './Notification';
 
 function App() {
     return (
-        <>
+        <>      
+            <Notification />
             <Wrap />
             <NavBar />
             <HeroSection />

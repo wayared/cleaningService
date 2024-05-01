@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import backgroundImage from './images/house.jpg'; // Make sure the path is correct
-import Notification from './Notifications';
+import Notification from './Notification';
 import './style.css'
 
 function Introduce() {
@@ -11,7 +11,7 @@ function Introduce() {
         serviceType: '',
         message: ''
     });
-    const [notification, setNotification] = useState({ message: '', type: '', isVisible: false });
+    const [notification, setNotification] = useState({ message: '', type: 'info', isVisible: false });
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -23,9 +23,9 @@ function Introduce() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // Simulate a POST request
+        console.log('Form Data:', formData); // Check what data is being sent
         try {
-            const response = await fetch('http://localhost:3001/send-email', { // Update with your API endpoint
+            const response = await fetch('http://localhost:3001/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -36,9 +36,11 @@ function Introduce() {
             if (response.ok) {
                 setNotification({ message: 'Request successful!', type: 'success', isVisible: true });
             } else {
-                throw new Error('Submission failed due to server error');
+                const errorResponse = await response.text(); // If not OK, get the response text
+                throw new Error(`Submission failed: ${errorResponse}`);
             }
         } catch (error) {
+            console.log('Error:', error);
             setNotification({ message: error.message, type: 'error', isVisible: true });
         }
     };
@@ -97,6 +99,9 @@ function Introduce() {
                     </div>
                 </div>
             </div>
+            {notification.isVisible && (
+                <Notification message={notification.message} type={notification.type} />
+            )}
         </section>
     );
 }

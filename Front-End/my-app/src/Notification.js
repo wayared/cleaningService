@@ -6,15 +6,14 @@ function Notification({ message, type }) {
 
     useEffect(() => {
         if (message) {
-            setVisible(true);  // Show the notification
+            setVisible(true); // Show the notification
             const timer = setTimeout(() => {
-                setVisible(false);  // Hide the notification after 5 seconds
+                setVisible(false); // Hide the notification after 5 seconds
             }, 5000);
             return () => clearTimeout(timer);
         }
     }, [message]);
 
-    // Adding enter and exit animations using CSS classes
     const notificationClass = visible ? "notification-visible" : "notification-hidden";
 
     return (
