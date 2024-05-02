@@ -9,6 +9,7 @@ import Portfolio from './Portfolio'
 import WhyChooseUs from './Why';
 import Notification from './Notification';
 import Contact from './Contact';
+import Services from './Services';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                     </>
                 } />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/services" element={<Services />} />
                 {/* Agrega más rutas según sea necesario */}
             </Routes>
             <Footer />
