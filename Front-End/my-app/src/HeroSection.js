@@ -12,9 +12,9 @@ function HeroSection() {
                 </video>
             </div>
             <div className="overlay"></div>
-            <div className="container" id="container-text">
+            <div className="container" id="container-text" data-aos="fade-up">
                 <div className="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-                    <div className="col-md-6 ftco-animate">
+                    <div className="col-md-6 ftco-animate" >
                         <h2 className="subheading">Pure Clean, Pure Comfort</h2>
                         <h1 className="mb-4">Transform Your Space with Our Eco-Friendly Cleaning Solutions</h1>
                         <p>
