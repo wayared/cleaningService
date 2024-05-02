@@ -152,7 +152,6 @@ p {
     margin: auto; /* Center align if needed */
     width: 80%; /* Full width of the content area */
     padding-left: 13%;
-    
 }
 
 .image-slider img {
@@ -219,29 +218,3 @@ p {
     right: 10px;
 }
 
-
-.slide-left {
-    animation: slideLeft 0.5s forwards;
-}
-
-.slide-right {
-    animation: slideRight 0.5s forwards;
-}
-
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}

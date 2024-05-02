@@ -68,7 +68,7 @@ const Services = () => {
     };
 
     return (
-        <section id="services" style={{ backgroundImage: `url(${servicesData[activeTab].backgroundImage})` }}>
+        <section id="services" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="container mt-5">
             <div className="row">
                 <div className="col-lg-3">
@@ -84,13 +84,13 @@ const Services = () => {
                     <h2>Service that we provide</h2>
                     <p>{servicesData[activeTab].description}</p>
                     <div className="image-slider" ref={sliderRef}>
-                        <button className="control-btn left" onClick={handlePrevImage}>&lt;</button>
+                        <button className="control-btn left" onClick={handlePrevImage}><i className="fa fa-chevron-left"></i></button>
                         <img
                             src={servicesData[activeTab].images[currentImageIndex]}
                             alt={servicesData[activeTab].name}
                             className={`img-fluid rounded-4 slide-${slideDirection}`}
                         />
-                        <button className="control-btn right" onClick={handleNextImage}>&gt;</button>
+                        <button className="control-btn right" onClick={handleNextImage}><i className="fa fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
