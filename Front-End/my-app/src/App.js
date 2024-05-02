@@ -19,12 +19,17 @@ function App() {
             <Wrap />
             <NavBar />
             <Routes>
-                <Route path="/" element={<HeroSection />} />
-                <Route path="/introduce" element={<Introduce />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/why" element={<WhyChooseUs />} />
+                <Route path="/app" element={
+                    <>
+                        <HeroSection />
+                        <Introduce />
+                        <Portfolio />
+                        <WhyChooseUs />
+                        {/* Otros componentes que desees mostrar en la página principal */}
+                    </>
+                } />
                 <Route path="/contact" element={<Contact />} />
-                {/* Agrega rutas adicionales aquí */}
+                {/* Agrega más rutas según sea necesario */}
             </Routes>
             <Footer />
         </Router>
