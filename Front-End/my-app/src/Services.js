@@ -1,18 +1,18 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './services.css'; // Ensure your CSS styles are set up correctly
-import backgroundImage from './images/house.jpg'; // Make sure the path is correct
 import house1 from './images/house.jpg';
 import house2 from './images/house2.jpg';
-
+import backgroundImage from './images/house.jpg'; // Make sure the path is correct
 const Services = () => {
     const [activeTab, setActiveTab] = useState('service1');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [transitionDirection, setTransitionDirection] = useState('next'); // to control the direction of the transition
 
     const servicesData = {
         service1: {
             name: "Deep Cleaning",
             description: "Details about Plumbing Leak...",
-            images: [house1,house2]
+            images: [house1, house2]
         },
         service2: {
             name: "Regular Cleaning",
@@ -41,31 +41,27 @@ const Services = () => {
         }
     };
 
-    // Handle clicking on a tab
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-        setCurrentImageIndex(0); // Reset image index on tab change
-    };
+    const handleNextImage = useCallback(() => {
+        setTransitionDirection('next');
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % servicesData[activeTab].images.length);
+    }, [activeTab, servicesData]);
 
-    // Setup effect for automatic image rotation
+    const handlePrevImage = useCallback(() => {
+        setTransitionDirection('prev');
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + servicesData[activeTab].images.length) % servicesData[activeTab].images.length);
+    }, [activeTab, servicesData]);
+
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentImageIndex(prevIndex => {
-                return (prevIndex + 1) % servicesData[activeTab].images.length; // Ensure the index wraps around
-            });
-        }, 3000); // Change image every 5 seconds
+        const timer = setInterval(handleNextImage, 5000);
+        return () => clearInterval(timer);
+    }, [handleNextImage]);
 
-        return () => clearInterval(timer); // Clean up the interval on unmount
-    }, [activeTab, servicesData]); // Depend on activeTab and servicesData for changes
-
-
-    
     return (
         <section id="services" className="ftco-section ftco-no-pt ftco-no-pb" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-lg-3">
-                        <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div className="nav flex-column nav-pills">
                             {Object.keys(servicesData).map((key) => (
                                 <button
                                     key={key}
@@ -80,14 +76,17 @@ const Services = () => {
                     <div className="col-lg-9">
                         <h2>Service that we provide</h2>
                         <p>{servicesData[activeTab].description}</p>
-                        <div>
+                        <div className="image-slider">
+                            <button className="control-btn left" onClick={handlePrevImage}>&lt;</button>
                             <img
                                 src={servicesData[activeTab].images[currentImageIndex]}
                                 alt={servicesData[activeTab].name}
                                 className="img-fluid rounded-4"
                             />
+                            <button className="control-btn right" onClick={handleNextImage}>&gt;</button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -95,4 +94,3 @@ const Services = () => {
 };
 
 export default Services;
-

@@ -101,8 +101,11 @@
 .nav-link {
     margin-bottom: 6%; /* Espacio entre botones */
     border: none;
+    border-radius: 30px !important;
     background-color: #f8f9fa; /* Color de fondo para los botones no activos */
     color: #495057; /* Color de texto para los botones no activos */
+    background-color: #ff80d3;
+  
 }
 
 .nav-link.active {
@@ -116,7 +119,6 @@
     
     margin-top: 20px; /* Espacio entre la descripción y la imagen */
     border-radius: 5px; /* Bordes redondeados para las imágenes */
-    padding-left: 15%;
 }
 
 /* Ajustes para el contenedor principal para reducir espacio en blanco */
@@ -142,4 +144,66 @@ p {
     .nav-pills .nav-link {
         padding: 10px; /* Más padding en móviles para fácil interacción */
     }
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    margin: auto; /* Center align if needed */
+    width: 100%; /* Full width of the content area */
+}
+
+.image-slider img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    height: 500px; /* Fixed height for all images */
+    object-fit: cover; /* Cover the box without losing aspect ratio */
+}
+
+.slide-next {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.slide-prev {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.control-btn {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
 }

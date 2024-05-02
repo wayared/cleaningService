@@ -20,7 +20,7 @@ function App() {
             <Wrap />
             <NavBar />
             <Routes>
-                <Route path="/app" element={
+                <Route path="/" element={
                     <>
                         <HeroSection />
                         <Introduce />
