@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './images/logo1.png';  // Ensure the path to your images is correct
 import './style.css';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -45,7 +46,7 @@ function NavBar() {
                         <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
                         <li className="nav-item"><a href="services.html" className="nav-link">Services</a></li>
                         <li className="nav-item"><a href="portfolio.html" className="nav-link">Portfolio</a></li>
-                        <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
+                        <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
                     </ul>
                 </div>
             </div>
