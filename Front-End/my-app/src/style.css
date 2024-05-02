@@ -828,13 +828,3 @@ form label{
 .estimate, .box{
     transition: background-color 0.5s ease; /* Cambia el color del fondo en un intervalo de 0.5 segundos */
 }
-
-
-#services {
-    height: auto;
-}
-
-#services{
-    min-height: 105vh !important;
-    position: relative;
-}

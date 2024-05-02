@@ -1,73 +1,76 @@
-import React, { useState, useEffect } from 'react';
-import './style.css'; // Ensure your CSS styles are set up correctly
-import backgroundImage from './images/house.jpg'; // Make sure the path is correct
+import React, {useState} from 'react';
+import './services.css'; // Ensure your CSS styles are set up correctly
 
-const servicesData = {
-    service1: {
-        name: "Plumbing Leak",
-        description: "Detailed description for Plumbing Leak...",
-        images: ["path_to_leak_image1.jpg", "path_to_leak_image2.jpg"]
-    },
-    service2: {
-        name: "Bathroom Plumbing",
-        description: "Details about Bathroom Plumbing...",
-        images: ["path_to_bathroom_image1.jpg", "path_to_bathroom_image2.jpg"]
-    },
-    // Add other services similarly
-};
 
-function Services() {
-    const [activeService, setActiveService] = useState('service1');
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const Services = () => {
+    const [activeTab, setActiveTab] = useState('service1');
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleImageChange();
-        }, 5000); // Change image every 5 seconds
-        return () => clearInterval(interval);
-    }, [activeService]);
-
-    const handleImageChange = () => {
-        const images = servicesData[activeService].images;
-        setCurrentImageIndex((currentImageIndex + 1) % images.length);
+    const servicesData = {
+        service1: {
+            name: "Plumbing Leak",
+            description: "Details about Plumbing Leak...",
+            images: ["assets/images/service-slider/01.jpg"]
+        },
+        service2: {
+            name: "Bathroom Plumbing",
+            description: "Details about Bathroom Plumbing...",
+            images: ["assets/images/service-slider/02.jpg"]
+        },
+        service3: {
+            name: "Kitchen Plumbing",
+            description: "Details about Kitchen Plumbing...",
+            images: ["assets/images/service-slider/03.jpg"]
+        },
+        service4: {
+            name: "Broken Fixture",
+            description: "Details about Broken Fixture...",
+            images: ["assets/images/service-slider/04.jpg"]
+        },
+        service5: {
+            name: "Drain Clogs",
+            description: "Details about Drain Clogs...",
+            images: ["assets/images/service-slider/05.jpg"]
+        },
+        service6: {
+            name: "Broken Toilet",
+            description: "Details about Broken Toilet...",
+            images: ["assets/images/service-slider/06.jpg"]
+        }
     };
 
-    const handleServiceChange = (serviceId) => {
-        setActiveService(serviceId);
-        setCurrentImageIndex(0); // Reset image index on service change
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
     };
 
     return (
-        <section id="services" className="ftco-section ftco-no-pt ftco-no-pb" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div className="container">
-            <div className="row g-4 g-xl-5">
-                <div className="col-lg-3 align-self-start">
-                    <ul className="nav nav-tabs nav-tabs-border flex-lg-column d-flex">
-                        {Object.keys(servicesData).map(serviceId => (
-                            <li key={serviceId} className="nav-item">
-                                <button
-                                    className={`nav-link ${activeService === serviceId ? 'active' : ''}`}
-                                    onClick={() => handleServiceChange(serviceId)}
-                                >
-                                    {servicesData[serviceId].name}
-                                </button>
-                            </li>
+        <div className="container mt-5">
+            <div className="row">
+                <div className="col-lg-3">
+                    <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        {Object.keys(servicesData).map((key) => (
+                            <button
+                                key={key}
+                                className={`nav-link ${activeTab === key ? 'active' : ''}`}
+                                onClick={() => handleTabClick(key)}
+                            >
+                                {servicesData[key].name}
+                            </button>
                         ))}
-                    </ul>
+                    </div>
                 </div>
                 <div className="col-lg-9">
                     <h2>Service that we provide</h2>
-                    <p>{servicesData[activeService].description}</p>
-                    <img
-                        src={servicesData[activeService].images[currentImageIndex]}
-                        alt={servicesData[activeService].name}
-                        className="service-image rounded-4"
-                    />
+                    <p>{servicesData[activeTab].description}</p>
+                    <div>
+                        {servicesData[activeTab].images.map((image, index) => (
+                            <img key={index} src={image} alt={servicesData[activeTab].name} className="img-fluid rounded-4" />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
-        </section>
     );
-}
+};
 
 export default Services;
+
