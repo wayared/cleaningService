@@ -83,11 +83,11 @@
 }
 
 #services{
-    height: 100vh;;
+    height: 100vh;
 }
 
 #services .container{
-    padding-top: 15%;
+    padding-top: 12%;
     padding-left: 10%;
 }
 
@@ -150,15 +150,17 @@ p {
     position: relative;
     overflow: hidden;
     margin: auto; /* Center align if needed */
-    width: 100%; /* Full width of the content area */
+    width: 80%; /* Full width of the content area */
+    padding-left: 13%;
+    
 }
 
 .image-slider img {
-    width: 100%;
+    width: 80%;
     transition: transform 0.5s ease-in-out;
     display: block;
-    height: 500px; /* Fixed height for all images */
     object-fit: cover; /* Cover the box without losing aspect ratio */
+    
 }
 
 .slide-next {
@@ -188,22 +190,58 @@ p {
 }
 
 .control-btn {
+    background-color: #d6336c; /* Darker pink */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     position: absolute;
     top: 50%;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
 
-.left {
+.control-btn:hover {
+    background-color: #f497b0; /* Lighter pink */
+}
+
+.control-btn.left {
     left: 10px;
 }
 
-.right {
+.control-btn.right {
     right: 10px;
+}
+
+
+.slide-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
