@@ -81,3 +81,65 @@
         padding-left: 40px;
     }
 }
+
+#services{
+    height: 100vh;;
+}
+
+#services .container{
+    padding-top: 15%;
+    padding-left: 10%;
+}
+
+
+/* Eliminar el margen superior y ajustar el espaciado de los botones */
+.nav-pills {
+    padding-top: 0; /* Reduce el espacio en la parte superior de los botones */
+    margin-top: 10px; /* Ajuste fino si es necesario */
+}
+
+.nav-link {
+    margin-bottom: 6%; /* Espacio entre botones */
+    border: none;
+    background-color: #f8f9fa; /* Color de fondo para los botones no activos */
+    color: #495057; /* Color de texto para los botones no activos */
+}
+
+.nav-link.active {
+    background-color: #ffce45; /* Fondo para el botón activo */
+    color: #000; /* Texto para el botón activo */
+}
+
+/* Ajustar la visualización de las imágenes */
+.img-fluid {
+    width: 50%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+    
+    margin-top: 20px; /* Espacio entre la descripción y la imagen */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    padding-left: 15%;
+}
+
+/* Ajustes para el contenedor principal para reducir espacio en blanco */
+.container.mt-5 {
+    margin-top: 0 !important; /* Elimina el margen adicional en la parte superior del contenedor */
+}
+
+/* Asegurar que los títulos y textos tengan el espaciado y tamaño adecuado */
+h2 {
+    margin-top: 0; /* Elimina cualquier margen superior del encabezado */
+    padding-top: 0; /* Asegura que no haya espacio extra por encima del encabezado */
+    font-size: 1.75rem; /* Tamaño del encabezado */
+    color: #333; /* Color del texto */
+}
+
+p {
+    font-size: 1rem; /* Tamaño de fuente para la descripción */
+    color: #666; /* Color de texto para la descripción */
+}
+
+/* Mejoras responsivas */
+@media (max-width: 768px) {
+    .nav-pills .nav-link {
+        padding: 10px; /* Más padding en móviles para fácil interacción */
+    }
+}
