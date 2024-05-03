@@ -82,10 +82,6 @@
     }
 }
 
-#services{
-    height: 100vh;
-}
-
 #services .container{
     padding-top: 12%;
     padding-left: 10%;
@@ -104,8 +100,16 @@
     border-radius: 30px !important;
     background-color: #f8f9fa; /* Color de fondo para los botones no activos */
     color: #495057; /* Color de texto para los botones no activos */
-    background-color: #ff80d3;
+    background-color: #fd6dcb;
   
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #fa8dd4;
 }
 
 .nav-link.active {
@@ -152,6 +156,7 @@ p {
     margin: auto; /* Center align if needed */
     width: 80%; /* Full width of the content area */
     padding-left: 13%;
+
 }
 
 .image-slider img {
@@ -212,9 +217,206 @@ p {
 
 .control-btn.left {
     left: 10px;
+    background-color: #fd6dcb !important;
+}
+
+.control-btn.left:hover {
+    background-color: #ff82d3 !important;
 }
 
 .control-btn.right {
     right: 10px;
+    background-color: #fd6dcb !important;
+}
+
+.control-btn.right:hover {
+    background-color: #ff82d3 !important;
+}
+
+p{
+    text-align: justify;
+}
+
+.video-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Esto asegurará que cubra todo el espacio vertical */
+    z-index: -100;
+    object-fit: cover;
+    height: 105vh;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el espacio sin distorsionarse */
+}
+
+/* Services Section Specific Styles */
+#services {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh; /* Asegura que cubra la altura completa de la pantalla */
+    padding-top: 4%;
+}
+
+#services .container {
+    padding: 20px; /* Ajusta el padding para mantener la consistencia */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+#services .nav-pills {
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Remueve el padding por defecto */
+    margin-right: 20px; /* Espacio a la derecha de la lista de tabs */
+}
+
+#services .nav-link {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #fd6dcb;
+    border: none;
+    border-radius: 30px; /* Estilo redondeado */
+    transition: all 0.3s ease;
+}
+
+#services .nav-link:hover, #services .nav-link.active {
+    background-color: #fa88d2;
+    color: white;
+}
+
+#services .services-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#services .services-image {
+    width: 100%;
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos responsivos para asegurar la visualización adecuada en dispositivos móviles */
+@media (max-width: 768px) {
+    #services .nav-pills {
+        flex-direction: row;
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+    }
+
+    #services .nav-link {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+/* Ajustes para los controles del slider */
+.control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f56ac4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    background-color: #ff91d8;
+}
+
+.control-btn.left {
+    left: 15px;
+}
+
+.control-btn.right {
+    right: 15px;
+}
+
+/* Ajuste para las animaciones de deslizamiento */
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.image-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Oculta cualquier parte del contenido que exceda el tamaño del contenedor */
+}
+
+.image-slider img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide-next {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.slide-prev {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+#services {
+    position: relative; /* Asegura la posición relativa para el posicionamiento absoluto de los elementos internos */
+    min-height: 100vh; /* Altura mínima para cubrir toda la pantalla verticalmente */
+    padding-bottom: 50px; /* Añade un espacio en el fondo para evitar superposición con el footer */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde de esta sección */
+}
+
+#services .container {
+    padding: 2rem 15px; /* Ajusta el relleno para el contenido interno */
+    max-width: 1140px; /* Controla el ancho máximo para grandes pantallas */
+    margin: auto; /* Centra el contenedor */
+}
+
+/* Estilos ajustados para los elementos dentro de services */
+.services-description {
+    margin-bottom: 20px; /* Añade un margen al final de la descripción para separar de la imagen */
+}
+
+.image-slider {
+    width: 100%; /* Utiliza todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio antes del footer */
+}
+
+.control-btn {
+    z-index: 5; /* Asegúrate de que los botones están sobre las imágenes y otros contenidos */
+}
+
+/* Ajustes de media query para una mejor respuesta en dispositivos móviles */
+@media (max-width: 768px) {
+    #services {
+        padding-bottom: 20px; /* Menor padding en dispositivos móviles */
+    }
+
+    .nav-pills .nav-link {
+        padding: 8px 12px; /* Botones más pequeños en dispositivos móviles */
+    }
+
+    .image-slider {
+        padding: 0 5%; /* Espacio lateral para la visualización de imágenes */
+    }
+}
+
+@media (max-width: 576px) {
+    #services .container {
+        padding: 2rem 10px; /* Menor padding lateral para maximizar el espacio disponible */
+    }
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './services.css'; // Ensure your CSS styles are set up correctly
 import house1 from './images/house.jpg';
 import house2 from './images/house2.jpg';
-import backgroundImage from './images/house.jpg'; // Make sure the path is correct
+import videoSource from './images/background.mp4'; // Adjust the path as necessary
 const Services = () => {
     const [activeTab, setActiveTab] = useState('service1');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -68,7 +68,13 @@ const Services = () => {
     };
 
     return (
-        <section id="services" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <section id="services">
+            <div className="video-background">
+                <video autoPlay loop muted playsInline id="video1">
+                    <source src={videoSource} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         <div className="container mt-5">
             <div className="row">
                 <div className="col-lg-3">
