@@ -245,7 +245,7 @@ p{
     height: 100%; /* Esto asegurará que cubra todo el espacio vertical */
     z-index: -100;
     object-fit: cover;
-    height: 105vh;
+    height: 140vh;
 }
 
 .video-background video {
@@ -260,7 +260,8 @@ p{
     overflow: hidden;
     width: 100%;
     min-height: 100vh; /* Asegura que cubra la altura completa de la pantalla */
-    padding-top: 4%;
+    padding-top: 5%;
+
 }
 
 #services .container {

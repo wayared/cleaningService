@@ -1,7 +1,17 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './services.css'; // Ensure your CSS styles are set up correctly
-import house1 from './images/house.jpg';
-import house2 from './images/house2.jpg';
+import deep1 from './images/deep1.jpg';
+import deep2 from './images/deep2.jpg';
+import deep3 from './images/deep3.jpg';
+import regular1 from './images/regular1.jpg';
+import regular2 from './images/regular2.jpg';
+import regular3 from './images/regular3.jpg';
+import kitchen1 from './images/kitchen1.jpg';
+import kitchen2 from './images/kitchen2.jpg';
+import kitchen3 from './images/kitchen3.jpg';
+import glass1 from './images/glass1.jpg';
+import glass2 from './images/glass2.jpg';
+import glass3 from './images/glass3.jpg';
 import videoSource from './images/background.mp4'; // Adjust the path as necessary
 const Services = () => {
     const [activeTab, setActiveTab] = useState('service1');
@@ -13,22 +23,22 @@ const Services = () => {
         service1: {
             name: "Deep Cleaning",
             description: "Experience a thorough clean that goes beyond the surface. Our deep cleaning service targets hard-to-reach areas and tackles stubborn dirt and grime. Ideal for preparing your space for special events or for a comprehensive seasonal cleaning, this service ensures every corner of your home or office shines. We use eco-friendly products and advanced techniques to deliver outstanding results.",
-            images: [house1, house2]
+            images: [deep1,deep2,deep3]
         },
         service2: {
             name: "Regular Cleaning",
             description: "Details about Bathroom Plumbing...",
-            images: ["./images/cleaning1.jpg", './images/cleaning2.jpg']
+            images: [regular1,regular2,regular3]
         },
         service3: {
             name: "Kitchen Cleaning",
             description: "Details about Kitchen Plumbing...",
-            images: ["assets/images/service-slider/03.jpg"]
+            images: [kitchen1,kitchen2,kitchen3]
         },
         service4: {
             name: "Glass Cleaning",
             description: "Details about Broken Fixture...",
-            images: ["assets/images/service-slider/04.jpg"]
+            images: [glass1,glass2,glass3]
         },
         service5: {
             name: "Office Cleaning",
