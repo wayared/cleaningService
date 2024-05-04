@@ -12,6 +12,12 @@ import kitchen3 from './images/kitchen3.jpg';
 import glass1 from './images/glass1.jpg';
 import glass2 from './images/glass2.jpg';
 import glass3 from './images/glass3.jpg';
+import office1 from './images/office1.jpg';
+import office2 from './images/office2.jpg';
+import office3 from './images/office3.jpg';
+import event4 from './images/event4.jpg';
+import event2 from './images/event2.jpg';
+import event3 from './images/event3.jpg';
 import videoSource from './images/background.mp4'; // Adjust the path as necessary
 const Services = () => {
     const [activeTab, setActiveTab] = useState('service1');
@@ -43,12 +49,12 @@ const Services = () => {
         service5: {
             name: "Office Cleaning",
             description: "Details about Drain Clogs...",
-            images: ["assets/images/service-slider/05.jpg"]
+            images: [office1,office2,office3]
         },
         service6: {
             name: "Special event cleaning",
             description: "Details about Broken Toilet...",
-            images: ["assets/images/service-slider/06.jpg"]
+            images: [event4,event2,event3]
         }
     };
 
