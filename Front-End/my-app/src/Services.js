@@ -28,32 +28,32 @@ const Services = () => {
     const servicesData = {
         service1: {
             name: "Deep Cleaning",
-            description: "Experience a thorough clean that goes beyond the surface. Our deep cleaning service targets hard-to-reach areas and tackles stubborn dirt and grime. Ideal for preparing your space for special events or for a comprehensive seasonal cleaning, this service ensures every corner of your home or office shines. We use eco-friendly products and advanced techniques to deliver outstanding results.",
+            description: "Our Deep Cleaning service goes beyond regular cleaning to tackle hard-to-reach areas and stubborn dirt. We thoroughly clean every corner of your home, leaving it refreshed and revitalized.",
             images: [deep1,deep2,deep3]
         },
         service2: {
             name: "Regular Cleaning",
-            description: "Details about Bathroom Plumbing...",
+            description: "Our Regular Cleaning service ensures that your home stays tidy and spotless on a consistent basis. We cover all essential cleaning tasks, including dusting, vacuuming, mopping, and sanitizing, so you can enjoy a clean and comfortable living space.",
             images: [regular1,regular2,regular3]
         },
         service3: {
             name: "Kitchen Cleaning",
-            description: "Details about Kitchen Plumbing...",
+            description: "Our Kitchen Cleaning service focuses on keeping your kitchen hygienic and shining. We clean countertops, appliances, cabinets, and floors, ensuring a fresh and inviting environment for cooking and dining.",
             images: [kitchen1,kitchen2,kitchen3]
         },
         service4: {
             name: "Glass Cleaning",
-            description: "Details about Broken Fixture...",
+            description: "Our Glass Cleaning service makes sure your windows, mirrors, and glass surfaces are crystal clear and streak-free, enhancing the beauty of your home with sparkling reflections.",
             images: [glass1,glass2,glass3]
         },
         service5: {
             name: "Office Cleaning",
-            description: "Details about Drain Clogs...",
+            description: "Our Office Cleaning service creates a clean and productive workspace by meticulously cleaning desks, floors, and common areas, ensuring a professional and welcoming environment for employees and visitors.",
             images: [office1,office2,office3]
         },
         service6: {
             name: "Special event cleaning",
-            description: "Details about Broken Toilet...",
+            description: "Our Special Event Cleaning service helps you prepare for or clean up after events, ensuring your venue is immaculate. We handle everything from setup to breakdown, so you can focus on enjoying your event.",
             images: [event4,event2,event3]
         }
     };
