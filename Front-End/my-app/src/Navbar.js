@@ -42,9 +42,9 @@ function NavBar() {
                 </button>
                 <div className={`${isExpanded ? 'show' : ''} collapse navbar-collapse`} id="ftco-nav">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item active"><Link to="/app" className="nav-link">Home</Link></li>
-                        <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
-                        <li className="nav-item"><a href="/services" className="nav-link">Services</a></li>
+                        <li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li>
+                        <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+                        <li className="nav-item"><Link to="/services" className="nav-link">Services</Link></li>
                         {/*<li className="nav-item"><a href="gallery.html" className="nav-link">Portfolio</a></li>*/}
                         <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
                     </ul>

@@ -1,0 +1,59 @@
+/* About Component Styles */
+.about-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* Ensure full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    position: relative; /* Ensure child elements are positioned correctly */
+    overflow: hidden;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ff78e8; /* Optional: yellow text color for headings */
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 20px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+}
+
+p{color: white;}

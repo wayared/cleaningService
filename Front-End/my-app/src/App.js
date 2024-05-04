@@ -10,6 +10,7 @@ import WhyChooseUs from './Why';
 import Notification from './Notification';
 import Contact from './Contact';
 import Services from './Services';
+import About from './About';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 } />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/about" element={<About />} />
                 {/* Agrega más rutas según sea necesario */}
             </Routes>
             <Footer />
