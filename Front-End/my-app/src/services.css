@@ -94,13 +94,13 @@
     margin-top: 10px; /* Ajuste fino si es necesario */
 }
 
-.nav-link {
+#services .nav-link {
     margin-bottom: 6%; /* Espacio entre botones */
     border: none;
     border-radius: 30px !important;
     background-color: #f8f9fa; /* Color de fondo para los botones no activos */
     color: #495057; /* Color de texto para los botones no activos */
-    background-color: #fd6dcb;
+    background-color: #fd74cd;
   
 }
 
@@ -193,7 +193,7 @@ p {
     }
 }
 
-.control-btn {
+#services .control-btn {
     background-color: #d6336c; /* Darker pink */
     color: white;
     border: none;
@@ -211,25 +211,25 @@ p {
     transition: background-color 0.3s;
 }
 
-.control-btn:hover {
+#services .control-btn:hover {
     background-color: #f497b0; /* Lighter pink */
 }
 
-.control-btn.left {
+#services .control-btn.left {
     left: 10px;
     background-color: #fd6dcb !important;
 }
 
-.control-btn.left:hover {
+#services .control-btn.left:hover {
     background-color: #ff82d3 !important;
 }
 
-.control-btn.right {
+#services .control-btn.right {
     right: 10px;
     background-color: #fd6dcb !important;
 }
 
-.control-btn.right:hover {
+#services .control-btn.right:hover {
     background-color: #ff82d3 !important;
 }
 

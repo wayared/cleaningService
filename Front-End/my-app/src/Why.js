@@ -18,14 +18,12 @@ function WhyChooseUs() {
                         </div>
                         <p className="mb-2-6">Removing the pressure from any part of cleaning is the thing that we master in.</p>
                         <div className="media mb-2-6" data-aos="fade-up">
-                            <i className="fa fa-chess-king icon-style1 mr-1-6 mrlg--2-6"></i>
                             <div className="media-body">
                                 <h4 className="h5">We are experts</h4>
                                 <p className="display-30 mb-0">Versatile, broad system that consistently delivers exceptional results.</p>
                             </div>
                         </div>
                         <div className="media mb-2-6" data-aos="fade-up">
-                            <i className="fa fa-check icon-style1 mr-1-6 mrlg--2-6"></i>
                             <div className="media-body">
                                 <h4 className="h5">We are committed</h4>
                                 <p className="display-30 mb-0">To our clients and are guided in everything we do by their needs.</p>

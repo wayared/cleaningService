@@ -390,12 +390,12 @@ nav {
 }
 
 .custom-navbar-bg, .btn-primary {
-    background-color: #f56ac4;
+    background-color: #ff6fcd;
     transition: background-color 0.5s ease; /* Cambia el color del fondo en un intervalo de 0.5 segundos */
 }
 
 .btn{
-    background-color: #f757bf;
+    background-color: #fe6fcc;
     border-color: #fc93d7;
     color: black;
 }
@@ -438,7 +438,7 @@ nav {
 }
 
 .btn-primary{
-    border-color: #f56ac4;
+    border-color: #ff6fcd !important;
 }
 
 .btn{
