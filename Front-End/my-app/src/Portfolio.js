@@ -34,9 +34,8 @@ function Portfolio() {
                                     <img className="rounded-top" src={service.image} alt={service.name} />
                                 </div>
                                 <div className="card-body">
-                                    <h3 className="h5"><a href="#!">{service.name}</a></h3>
+                                    <h3 className="h5">{service.name}</h3>
                                     <p className="display-30">{service.description}</p>
-                                    <a href="#!" className="read-more">read more</a>
                                 </div>
                             </div>
                         </div>
