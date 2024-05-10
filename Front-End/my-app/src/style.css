@@ -500,6 +500,12 @@ form label{
     color:white;
 }
 
+form #consent{
+    color:#000000;
+    font-size: 12px;
+    padding-left: 3%;
+}
+
 .request{ 
     font-weight: 400 !important; 
     font-size: 30px;
