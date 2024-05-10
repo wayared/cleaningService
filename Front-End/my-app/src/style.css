@@ -47,6 +47,10 @@ body,html{
     }
 }
 
+#introduce #introduce-p, #introduce .subheading,#introduce .mb-4{
+    color: white !important;
+    font-size: 500;
+}
 
 
 @media (max-width: 600px) {

@@ -60,8 +60,9 @@ function Footer() {
                         <div className="row">
                             <div className="col-12 text-center">
                                 <p className="text-white opacity9 mb-0 display-31 letter-spacing-2 text-uppercase">
-                                    © {currentYear} Cleaning <a href="" className="white-hover" target="_blank">Chitrakoot Web</a>
+                                    © {currentYear} MC Dream Cleaning 
                                 </p>
+                                <p>Web Created and Designed by <a href="https://www.linkedin.com/in/jared-castillo-6383a5239" className="white-hover" target="_blank">Jared Castillo</a></p>
                             </div>
                         </div>
                     </div>
