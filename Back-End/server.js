@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 const cors = require('cors');
+const fs = require('fs');
 const app = express();
 
 // SendGrid API key setup
@@ -23,6 +24,16 @@ app.post('/send-email', (req, res) => {
         subject: serviceType,
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
+
+    // Save client data to a text file
+    const clientData = `${name},${email},${phone}\n`;
+    fs.appendFile('clients.txt', clientData, (err) => {
+        if (err) {
+            console.error('Error saving client data:', err);
+        } else {
+            console.log('Client data saved to clients.txt');
+        }
+    });
 
     // Send the email
     sgMail
