@@ -500,8 +500,8 @@ form label{
     color:white;
 }
 
-form #consent{
-    color:#000000;
+#consent-label{
+    color:#000000 !important;
     font-size: 80%;
     padding-left: 3%;
 }

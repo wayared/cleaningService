@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Form({ formData, handleChange, handleSubmit }) {
-    
+
     return (
         <div id="appoinment" className="col-lg-6 mt-5 mt-lg-0" data-aos="fade-up">
             <div className="bg-primary rounded-4 p-4 position-relative overflow-hidden">
@@ -36,7 +36,7 @@ function Form({ formData, handleChange, handleSubmit }) {
                     </div>
                     <div className="col-12">
                         <input type="checkbox" id="consent" name="consent" checked={formData.consent} onChange={handleChange} />
-                        <label htmlFor="consent">I agree to allow my data to be used for future notices, information, or promotions.</label>
+                        <label htmlFor="consent" id="consent-label">I agree to allow my data to be used for future notices, information, or promotions.</label>
                     </div>
                     <button type="submit" className="btn mb-0">Get an appointment</button>
                 </form>
