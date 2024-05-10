@@ -6,22 +6,27 @@ const cors = require('cors');
 const fs = require('fs');
 const app = express();
 
-// Configuración de la clave de la API SendGrid
+// Configurar la API Key de SendGrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Middleware
-app.use(cors());
+app.use(cors({ // Limita el acceso a tu dominio de frontend
+}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 3001;
 
-// Manejar la solicitud de envío de correo electrónico y guardar los datos del cliente si hay consentimiento
+// Ruta para enviar correo y guardar datos
 app.post('/send-email', async (req, res) => {
     const { name, email, phone, message, serviceType, consent } = req.body;
-    console.log(req.body.consent);
 
-    // Crear el objeto de mensaje para enviar
+    // Validar que todos los campos requeridos estén presentes
+    if (!name || !email || !phone || !message || !serviceType) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    // Crear el mensaje de correo
     const msg = {
         to: 'mcdrcleaning@gmail.com',
         from: 'mcdrcleaning@gmail.com',
@@ -29,24 +34,21 @@ app.post('/send-email', async (req, res) => {
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
 
-    console.log('Consent:',consent);
-
     try {
-        // Verificar si el consentimiento ha sido dado
+        // Guardar datos solo si el consentimiento es `true`
         if (consent) {
-            // Guardar datos del cliente en un archivo de texto
             const clientData = `${name},${email},${phone}\n`;
             fs.appendFileSync('clients.txt', clientData);
             console.log('Client data saved to clients.txt');
         }
 
-        // Enviar el correo electrónico
+        // Enviar el correo
         await sgMail.send(msg);
         console.log('Email sent');
-        res.send('success');
+        res.json({ status: 'success' });
     } catch (error) {
-        console.error('Error:', error.response.body.errors);
-        res.status(500).send('error');
+        console.error('Error:', error.response ? error.response.body.errors : error);
+        res.status(500).json({ error: 'Failed to send email' });
     }
 });
 

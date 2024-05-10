@@ -10,15 +10,17 @@ function Contact() {
         email: '',
         phone: '',
         serviceType: '',
-        message: ''
+        message: '',
+        consent: false
     });
     const [notification, setNotification] = useState({ message: '', type: 'info', isVisible: false });
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
+        const { name, type, checked, value } = event.target;
+        console.log(name, type, checked, value); // Esto te ayudará a ver qué recibe la función
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: type === 'checkbox' ? checked : value
         }));
     };
 
