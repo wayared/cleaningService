@@ -9,7 +9,7 @@ import Portfolio from './Portfolio'
 import WhyChooseUs from './Why';
 import Notification from './Notification';
 import Contact from './Contact';
-import Services from '../Services';
+import Services from './Services';
 import About from './About';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
