@@ -1,6 +1,23 @@
 import React from 'react';
+import Select from 'react-select';  // Importa React Select
+import InputMask from 'react-input-mask';  // Importa InputMask
+
+
+const options = [
+    { value: 'basic_cleaning', label: 'Basic Cleaning' },
+    { value: 'deep_cleaning', label: 'Deep Cleaning' },
+    { value: 'event_cleaning', label: 'Special Event Cleaning' }
+];
 
 function Form({ formData, handleChange, handleSubmit }) {
+    const handleSelectChange = selectedOption => {
+        handleChange({
+            target: {
+                name: 'serviceType',
+                value: selectedOption.value
+            }
+        });
+    };
 
     return (
         <div id="appoinment" className="col-lg-6 mt-5 mt-lg-0" data-aos="fade-up">
@@ -17,26 +34,32 @@ function Form({ formData, handleChange, handleSubmit }) {
                         <input name="email" type="email" className="form-control" required value={formData.email} onChange={handleChange} />
                     </div>
                     <div className="col-md-6">
-                        <label htmlFor="phone">Phone</label>
-                        <input name="phone" type="tel" className="form-control" required value={formData.phone} onChange={handleChange} />
+                        <label htmlFor="phone">Phone (+1)</label>
+                        <InputMask
+                            mask="(999) 999-9999"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="form-control"
+                            name="phone"
+                            maskChar=" "
+                        />
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="serviceType">Service Type</label>
-                        <select name="serviceType" className="form-control" value={formData.serviceType} onChange={handleChange}>
-                            <option value="">Select a service</option>
-                            <option value="basic_cleaning">Basic Cleaning</option>
-                            <option value="deep_cleaning">Deep Cleaning</option>
-                            <option value="event_cleaning">Special Event Cleaning</option>
-                        </select>
+                        <Select
+                            options={options}
+                            value={options.find(option => option.value === formData.serviceType)}
+                            onChange={handleSelectChange}
+                            classNamePrefix="react-select"
+                        />
                     </div>
                     <div className="col-12">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" className="form-control" id="exampleFormControlTextarea1" rows="3"
-                            required value={formData.message} onChange={handleChange}></textarea>
+                        <textarea name="message" className="form-control" rows="3" required value={formData.message} onChange={handleChange}></textarea>
                     </div>
                     <div className="col-12">
                         <input type="checkbox" id="consent" name="consent" checked={formData.consent} onChange={handleChange} />
-                        <label htmlFor="consent" id="consent-label">I agree to allow my data to be used for future notices, information, or promotions.</label>
+                        <label htmlFor="consent">I agree to allow my data to be used for future notices, information, or promotions.</label>
                     </div>
                     <button type="submit" className="btn mb-0">Get an appointment</button>
                 </form>
