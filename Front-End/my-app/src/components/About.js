@@ -1,5 +1,5 @@
 import React from 'react';
-import './about.css'; // Import the CSS file
+import './stylesheets/about.css'; // Import the CSS file
 import backgroundImage from './images/house4.jpg'; // Path to your background image
 import logoImage from './images/logo1.png'; // Path to your logo image
 

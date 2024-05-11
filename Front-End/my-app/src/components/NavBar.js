@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './images/logo1.png';  // Ensure the path to your images is correct
-import './style.css';
+import './stylesheets/style.css';
 import { Link } from 'react-router-dom';
 
 function NavBar() {

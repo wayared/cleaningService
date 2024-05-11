@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './images/logo1.png'; // Make sure the path is correct
 import nextdoorIcon from './images/nextdoor.png'; // Make sure the path is correct
-import './style.css'
+import './stylesheets/style.css'
 import backgroundImage from './images/tools.png'
 
 

@@ -6,7 +6,7 @@ import glassCleaningImage from './images/glass.jpg';
 import deepCleaningImage from './images/deep.jpg';
 import officeCleaningImage from './images/office.jpg';
 import eventCleaningImage from './images/event.jpg';
-import './style.css'
+import './stylesheets/style.css'
 
 const services = [
     { id: 1, name: "Regular Cleaning", image: regularCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },

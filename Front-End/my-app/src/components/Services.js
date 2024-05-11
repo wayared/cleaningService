@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import './services.css'; // Ensure your CSS styles are set up correctly
+import './stylesheets/services.css'; // Ensure your CSS styles are set up correctly
 import deep1 from './images/deep1.jpg';
 import deep2 from './images/deep2.jpg';
 import deep3 from './images/deep3.jpg';

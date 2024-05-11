@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import backgroundImage from './images/home.jpg'; // Make sure the path is correct
 import Notification from './Notification';
 import Form from './Form';  // Import the reusable form component
-import './style.css'
+import './stylesheets/style.css'
 
 function Introduce() {
     const [formData, setFormData] = useState({
