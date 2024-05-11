@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backgroundImage from './images/home.jpg'; // Make sure the path is correct
+import backgroundImage from './images/house3.jpg'; // Make sure the path is correct
 import Notification from './Notification';
 import Form from './Form';  // Import the reusable form component
 import './stylesheets/style.css'

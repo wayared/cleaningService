@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from './images/background1.jpg'; // Ensure the path is correct
+import backgroundImage from './images/bubbles.jpg'; // Ensure the path is correct
 import about06 from './images/about-06.jpg';
 import about02 from './images/about-02.jpg';
 import about03 from './images/about-03.jpg';

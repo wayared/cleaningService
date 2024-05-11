@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from './images/bubbles.jpg'; // Make sure the path is correct
+import backgroundImage from './images/background.jpg'; // Make sure the path is correct
 import regularCleaningImage from './images/regular.jpg'; // Adjust the path as necessary
 import kitchenCleaningImage from './images/kitchen.jpg';
 import glassCleaningImage from './images/glass.jpg';

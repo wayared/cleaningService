@@ -48,8 +48,8 @@ body,html{
 }
 
 #introduce #introduce-p, #introduce .subheading,#introduce .mb-4{
-    color: white !important;
-    font-size: 500;
+    color: black !important;
+    font-weight: 500;
 }
 
 
@@ -520,9 +520,7 @@ form label{
     width: 100% !important;
 }
 
-#introduce-p{
-    color: white !important;
-}
+
 
 .container #instroduce-container{
     min-height: 100vh;
