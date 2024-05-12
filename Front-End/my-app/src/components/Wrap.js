@@ -17,9 +17,9 @@ function Wrap() {
                     <div className="col-12 col-md d-flex justify-content-md-end">
                         <div className="social-media">
                             <p className="mb-0 d-flex">
-                                <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-facebook"><i className="sr-only">Facebook</i></span></a>
-                                <a href="#" className="d-flex align-items-center justify-content-center"><img id="nextdoor" src={nextdoorIcon} alt="Nextdoor" /></a>
-                                <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-instagram"><i className="sr-only">Instagram</i></span></a>
+                                <a href="https://www.facebook.com/profile.php?id=61555800778231" className="d-flex align-items-center justify-content-center"><span className="fa fa-facebook"><i className="sr-only">Facebook</i></span></a>
+                                <a href="https://nextdoor.com/pages/mc-dream-cleaning-portland-or/?init_source=org_pages&utm_source=share&utm_campaign=1715493453309" className="d-flex align-items-center justify-content-center"><img id="nextdoor" src={nextdoorIcon} alt="Nextdoor" /></a>
+                                <a href="https://www.instagram.com/mc_dreamcleaning/" className="d-flex align-items-center justify-content-center"><span className="fa fa-instagram"><i className="sr-only">Instagram</i></span></a>
                             </p>
                         </div>
                     </div>
