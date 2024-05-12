@@ -21,9 +21,9 @@ function Footer() {
                             Different kinds and sizes of edifices experiences on cleaning region with effective undertaking on going.
                         </p>
                         <ul className="footer-social-icon"  data-aos="fade-up">
-                            <li><a href="#!"><i className="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#!"><i className="fa fa-instagram"></i></a></li>
-                            <li><a href="#!"><img id="nextdoor" src={nextdoorIcon} alt="Nextdoor" /></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61555800778231"><i className="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/mc_dreamcleaning/"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="https://nextdoor.com/pages/mc-dream-cleaning-portland-or/?init_source=org_pages&utm_source=share&utm_campaign=1715493453309"><img id="nextdoor" src={nextdoorIcon} alt="Nextdoor" /></a></li>
                         </ul>
                     </div>
                     <div className="col-lg-3 col-md-6 mb-2-5 mb-lg-0"  data-aos="fade-up">
