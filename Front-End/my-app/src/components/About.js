@@ -16,7 +16,7 @@ const About = () => {
                     </p>
                     <h2>Mission</h2>
                     <p>
-                        Our mission is to provide exceptional cleaning services that exceed our clients' expectations. We strive to achieve this through our commitment to quality, reliability, and eco-friendly practices.
+                    At McDream Cleaning, our mission is to provide exceptional cleaning services that transform your space into a pristine oasis. We are dedicated to exceeding your expectations by delivering meticulous cleaning using safe, effective methods and environmentally friendly products. Our goal is to enhance your quality of life by providing a clean and inviting home that you can truly relax and enjoy.
                     </p>
                     <h2>Why Choose Us?</h2>
                     <p>
