@@ -18,7 +18,7 @@ function Footer() {
                             <img id="logo" src={logo} alt="logo" />
                         </div>
                         <p className="display-30 text-white mb-1-6">
-                            Different kinds and sizes of edifices experiences on cleaning region with effective undertaking on going.
+                        Your Partner for Professional Cleaning Services. Experience Excellence Today!
                         </p>
                         <ul className="footer-social-icon"  data-aos="fade-up">
                             <li><a href="https://www.facebook.com/profile.php?id=61555800778231"><i className="fa fa-facebook-f"></i></a></li>
