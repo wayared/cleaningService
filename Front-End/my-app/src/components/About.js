@@ -20,7 +20,10 @@ const About = () => {
                     </p>
                     <h2>Why Choose Us?</h2>
                     <p>
-                        With years of experience and a dedication to customer satisfaction, we are the preferred choice for cleaning services. Our team is highly trained, fully insured, and committed to delivering superior results.
+                    Expertise: With years of experience, we deliver professional cleaning services tailored to your needs.<br></br>
+Quality: We use top-of-the-line products and equipment to ensure a thorough and effective clean every time.<br></br>
+Reliability: You can count on us to be punctual, reliable, and dedicated to delivering the best results.<br></br>
+Customer Satisfaction: Your satisfaction is our priority, and we go above and beyond to exceed your expectations."
                     </p>
                 </div>
             </div>
