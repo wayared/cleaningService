@@ -59,7 +59,7 @@ function Form({ formData, handleChange, handleSubmit }) {
                     </div>
                     <div className="col-12">
                         <input type="checkbox" id="consent" name="consent" checked={formData.consent} onChange={handleChange} />
-                        <label htmlFor="consent">I agree to allow my data to be used for future notices, information, or promotions.</label>
+                        <label id="consent-label" htmlFor="consent">I agree to allow my data to be used for future notices, information, or promotions.</label>
                     </div>
                     <button type="submit" className="btn mb-0">Get an appointment</button>
                 </form>
