@@ -9,9 +9,9 @@ import eventCleaningImage from './images/event.jpg';
 import './stylesheets/style.css'
 
 const services = [
-    { id: 1, name: "Regular Cleaning", image: regularCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },
-    { id: 2, name: "Kitchen Cleaning", image: kitchenCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },
-    { id: 3, name: "Glass Cleaning", image: glassCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },
+    { id: 1, name: "Regular Cleaning", image: regularCleaningImage, description: "Maintain a clean and fresh home with our regular cleaning services." },
+    { id: 2, name: "Kitchen Cleaning", image: kitchenCleaningImage, description: "Specialized cleaning for a hygienic and safe cooking environment." },
+    { id: 3, name: "Glass Cleaning", image: glassCleaningImage, description: "Restore clarity to your windows, mirrors, and glass surfaces." },
     { id: 4, name: "Deep Cleaning", image: deepCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },
     { id: 5, name: "Office Cleaning", image: officeCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." },
     { id: 6, name: "Special Event Cleaning", image: eventCleaningImage, description: "We are already high standards to have you see us as the absolute best in the industry." }
