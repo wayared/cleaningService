@@ -34,7 +34,7 @@ function NavBar() {
     return (
         <nav className={`navbar navbar-expand-lg ftco_navbar ftco-navbar-light ${hidden ? 'hide' : ''}`} id="ftco-navbar">
             <div className="container">
-                <a className="navbar-brand ml-auto" href="index.html">
+                <a className="navbar-brand ml-auto" href="/">
                     <img src={logo} alt="Cleaning Company Logo" id="navbar-logo" />
                 </a>
                 <button className="navbar-toggler" onClick={toggleNavbar} aria-label="Toggle navigation">
