@@ -16,17 +16,17 @@ function WhyChooseUs() {
                             <h5 className="text-primary h6">Why Choose Us</h5>
                             <h2 className="display-20 display-md-18 display-lg-16 mb-1-6">We will make any place neat & clean.</h2>
                         </div>
-                        <p className="mb-2-6">Removing the pressure from any part of cleaning is the thing that we master in.</p>
+                        <p className="mb-2-6">Choose McDream Cleaning for expert cleaning services that guarantee exceptional results. Our commitment to quality and customer satisfaction sets us apart.</p>
                         <div className="media mb-2-6" data-aos="fade-up">
                             <div className="media-body">
                                 <h4 className="h5">We are experts</h4>
-                                <p className="display-30 mb-0">Versatile, broad system that consistently delivers exceptional results.</p>
+                                <p className="display-30 mb-0">With our skilled team and attention to detail, we deliver superior cleaning results that exceed expectations.</p>
                             </div>
                         </div>
                         <div className="media mb-2-6" data-aos="fade-up">
                             <div className="media-body">
                                 <h4 className="h5">We are committed</h4>
-                                <p className="display-30 mb-0">To our clients and are guided in everything we do by their needs.</p>
+                                <p className="display-30 mb-0">Our dedication shines through in every cleaning job we undertake, ensuring your satisfaction and a pristine space.</p>
                             </div>
                         </div>
                     </div>

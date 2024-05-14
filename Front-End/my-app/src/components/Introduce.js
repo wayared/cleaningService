@@ -56,13 +56,9 @@ function Introduce() {
                     <div className="col-md-6 pl-md-5 pt-md-5" data-aos="fade-up">
                         <div className="row justify-content-start py-5">
                             <div className="col-md-12 heading-section ftco-animate">
-                                <span className="subheading">Welcome to Cleaning Company</span>
-                                <h2 className="mb-4">Let's make you fresher than ever</h2>
-                                <p id="introduce-p">Far far away, behind the word mountains, far from the countries Vokalia
-                                    and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                                    at the coast of the Semantics, a large language ocean. A small river named Duden flows
-                                    by their place and supplies it with the necessary regelialia. It is a paradisematic
-                                    country, in which roasted parts of sentences fly into your mouth.</p>
+                                <span className="subheading">Welcome to MC Dream Cleaning Company</span>
+                                <h2 className="mb-4">Experience a new level of cleanliness and comfort with our expert services.</h2>
+                                <p id="introduce-p">Our dedicated team goes above and beyond to deliver exceptional cleaning services for your home or office. With a commitment to quality and customer satisfaction, we'll leave your space sparkling clean and inviting. Contact us today to schedule your cleaning and experience the McDream Cleaning difference!</p>
                             </div>
                         </div>
                     </div>
