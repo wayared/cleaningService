@@ -27,7 +27,7 @@ function Form({ formData, handleChange, handleSubmit }) {
                 <form id='appoinment-form' className="row g-4 align-items-center pb-sm-6" onSubmit={handleSubmit}>
                     <div className="col-md-6">
                         <label htmlFor="name">Name</label>
-                        <input name="name" type="text" className="form-control" value={formData.name} onChange={handleChange} />
+                        <input name="name" type="text" className="form-control" value={formData.name} onChange={handleChange} required/>
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="email">Email</label>
@@ -42,12 +42,14 @@ function Form({ formData, handleChange, handleSubmit }) {
                             className="form-control"
                             name="phone"
                             maskChar=" "
+                            required
                         />
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="serviceType">Service Type</label>
                         <Select
                             options={options}
+                            required
                             value={options.find(option => option.value === formData.serviceType)}
                             onChange={handleSelectChange}
                             classNamePrefix="react-select"
